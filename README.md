@@ -75,9 +75,8 @@ All solar panels can now function at night, although energy production will be c
 *   ![](https://github.com/AET9RNAL/ModAssets/releases/download/Assets/EcoEnergistics_Icon_photonicalloy.png) - Photonic Alloy
 *   ![](https://github.com/AET9RNAL/ModAssets/releases/download/Assets/EcoEnergistics_Icon_neutronalloy.png) - Neutron Alloy
 
-The addon is currently in development, bugs are expected, although nothing critical was noticed during the testing. All solar panels all fully functional and configurable, with the only exception of absent GUI.
+The addon is currently in development, bugs are expected, although nothing critical was noticed during the testing. All solar panels all fully functional and configurable.
 
-Don't try to force something you want to charge into panels via pipes etc, you won't be able to get it out. The GUI might or might not be added in the future, as I'm currently trying to figure out how to do it. If you liked this project and you want to speed up the process and contribute to the addon development feel free to create a pull request
 
 Credits: Huge thanks to the Mekanism team for creating Mekanism and it's official addons
 
