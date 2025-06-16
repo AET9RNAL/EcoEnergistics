@@ -1,0 +1,27 @@
+{
+  "result": {
+    "nbt": {"tier": 1},
+    "item": "mekanismecoenergistics:ecotransmitter",
+    "data": 2,
+    "count": 8,
+    "type": "mekanism:item_nbt"
+  },
+  "pattern": [
+    "TTT",
+    "TET",
+    "TTT"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "T": {
+      "nbt": {"tier": 0},
+      "item": "mekanismecoenergistics:ecotransmitter",
+      "data": 2,
+      "type": "mekanism:item_nbt"
+    },
+    "E": {
+      "ore": "alloyHybrid",
+      "type": "forge:ore_dict"
+    }
+  }
+}
