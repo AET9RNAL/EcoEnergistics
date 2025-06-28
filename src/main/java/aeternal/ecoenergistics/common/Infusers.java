@@ -28,6 +28,7 @@ public class Infusers {
     public static InfuseType neutronium;
     public static InfuseType infinity;
 
+    public static List<ItemStack> glowstoneDusts = OreDictionary.getOres("dustActivatedGlowstone");
     public static List<ItemStack> goldDusts = OreDictionary.getOres("dustGold");
     public static List<ItemStack> steelDusts = OreDictionary.getOres("dustSteel");
     public static List<ItemStack> lapisDusts = OreDictionary.getOres("dustLapis");
@@ -36,7 +37,7 @@ public class Infusers {
     public static List<ItemStack> uraniumDusts = OreDictionary.getOres("dustUranium");
     public static List<ItemStack> iridiumDusts = OreDictionary.getOres("dustIridium");
     public static List<ItemStack> CrystalMatrixDusts = OreDictionary.getOres("dustCrystalMatrix");
-    public static List<ItemStack> NeutroniumDusts = OreDictionary.getOres("dustNeutronium");
+    public static List<ItemStack> NeutroniumDusts = OreDictionary.getOres("dustCosmicNeutronium");
     public static List<ItemStack> InfinityDusts = OreDictionary.getOres("dustInfinity");
 
 

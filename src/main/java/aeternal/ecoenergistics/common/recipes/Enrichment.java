@@ -34,6 +34,7 @@ public class Enrichment {
             ItemStack uraniumCompressed = new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 5);
             ItemStack iridiumCompressed = new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 6);
 
+            ItemStack glowstoneCompressed = new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 2);
             if (!titaniumDusts.isEmpty()){
                 ItemStack titaniumDust = titaniumDusts.get(0).copy();
                 ItemStack titaniumDust2 = titaniumDust.copy();
@@ -65,7 +66,11 @@ public class Enrichment {
             RecipeHandler.addEnrichmentChamberRecipe(lapisDusts.get(0).copy(), new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 0));
             RecipeHandler.addEnrichmentChamberRecipe(emeraldDusts.get(0).copy(), new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 1));
             */
-            RecipeHandler.addEnrichmentChamberRecipe(new ItemStack(EcoEnergisticsItems.MoreDust, 1, MoreDust.ACTIVATEDGLOWSTONE.ordinal()), new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 2));
+            if (!glowstoneDusts.isEmpty()){
+                ItemStack glowstoneDust = glowstoneDusts.get(0).copy();
+                RecipeHandler.addEnrichmentChamberRecipe(glowstoneDust,glowstoneCompressed);
+            }
+
             if (!goldDusts.isEmpty()) {
                 RecipeHandler.addEnrichmentChamberRecipe(goldDusts.get(0).copy(), new ItemStack(EcoEnergisticsItems.MoreCompressed, 1, 3));
             }

@@ -12,7 +12,10 @@ import mekanism.common.config.MekanismConfig;
 import mekanism.common.recipe.RecipeHandler;
 import morph.avaritia.init.ModItems;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import static aeternal.ecoenergistics.common.Infusers.*;
+import static aeternal.ecoenergistics.common.Infusers.glowstoneDusts;
 
 public class Crusher {
     public static void InitCustomCrusherRecipes() {
@@ -58,15 +61,21 @@ public class Crusher {
             RecipeHandler.addCrusherRecipe(iridiumIngot, iridiumDust);
 
             if (EcoEnergistics.hooks.AvaritiaLoaded && EcoConfig.current().integration.AvaritiaEnable.val()){
-                ItemStack crystalDust = new ItemStack(EcoEnergisticsItems.DustAvaritia,1,0);
-                ItemStack neutroniumDust = new ItemStack(EcoEnergisticsItems.DustAvaritia,1,1);
-                ItemStack infinityDust = new ItemStack(EcoEnergisticsItems.DustAvaritia,1, AvaritiaTiers.INFINITY.ordinal());
-                ItemStack crystalIngot = ModItems.crystal_matrix_ingot;
-                ItemStack neutroniumIngot = ModItems.neutronium_ingot;
-                ItemStack infinityIngot = ModItems.infinity_ingot;
-                RecipeHandler.addCrusherRecipe(crystalIngot,crystalDust);
-                RecipeHandler.addCrusherRecipe(neutroniumIngot,neutroniumDust);
-                RecipeHandler.addCrusherRecipe(infinityIngot,infinityDust);
+                if (!NeutroniumDusts.isEmpty()){
+                    ItemStack neutroniumIngot = ModItems.neutronium_ingot;
+                    ItemStack neutroniumDust = NeutroniumDusts.get(0).copy();
+                    RecipeHandler.addCrusherRecipe(neutroniumIngot,neutroniumDust);
+                }
+                if (!CrystalMatrixDusts.isEmpty()){
+                    ItemStack crystalIngot = ModItems.crystal_matrix_ingot;
+                    ItemStack crystalDust = CrystalMatrixDusts.get(0).copy();
+                    RecipeHandler.addCrusherRecipe(crystalIngot,crystalDust);
+                }
+                if (!InfinityDusts.isEmpty()){
+                    ItemStack infinityIngot = ModItems.infinity_ingot;
+                    ItemStack infinityDust = InfinityDusts.get(0).copy();
+                    RecipeHandler.addCrusherRecipe(infinityIngot,infinityDust);
+                }
             }
         }
     }
